@@ -13,7 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class Test {
+public class AllController {
     @Autowired
     Employee employee;
     @Autowired
@@ -24,7 +24,7 @@ public class Test {
     public String Home() {
 /*        employee.setName("fdvcv");
         employee.getName();
-        employee.getThamSo1("test", "test2");
+        employee.setThamSo1("test", "test2");
        // employee.throwException();
         System.out.println("get name student "+student.getName());*/
 
@@ -45,6 +45,42 @@ public class Test {
     /*    //không thông qua Proxy sẽ k liên kết AOp đc
         student1.setName("ff");
         student1.getName();*/
+        return "home";
+    }
+
+    @RequestMapping(value = "/testEmployeeAfterAspectThrowing")
+    public String testEmployeeAfterAspectThrowing() {
+        employee.throwException();
+        return "home";
+    }
+
+    @RequestMapping(value = "/AfterReturning")
+    public String afterReturning() {
+        employee.getName();
+        return "home";
+    }
+
+    @TestTuTaoAnnotation
+    @RequestMapping(value = "/testAnnotationAspect")
+    public String testAnnotationAspect() {
+        return "home";
+    }
+
+    @RequestMapping(value = "/testAroundAdvice")
+    public String testAroundAdvice() {
+        student.getName();
+        return "home";
+    }
+
+    @RequestMapping(value = "/testEmployeeAspectBeforeAndAfter")
+    public String testEmployeeAspectBeforeAndAfter() {
+        student.getName1();
+        return "home";
+    }
+
+    @RequestMapping(value = "/testEmployeeAspectJoinPointArgs")
+    public String testEmployeeAspectJoinPointArgs() {
+        employee.setThamSo1("test", "test");
         return "home";
     }
 }

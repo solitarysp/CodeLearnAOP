@@ -30,7 +30,7 @@ public class Employee {
         System.out.println(thamso);
     }
 
-    public void getThamSo1(String thamso1, String thamso2) {
+    public void setThamSo1(String thamso1, String thamso2) {
     }
 
     public void throwException() {

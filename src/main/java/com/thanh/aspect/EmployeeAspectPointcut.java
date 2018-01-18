@@ -15,6 +15,7 @@ public class EmployeeAspectPointcut {
 
     @Pointcut("execution(public String getName())")// dùng cut lấy để thực hiện tất cả methods public String getName()
     public void getNamePointcut() {
+        System.out.println("testttttttttttttttttt");// câu này này sẽ k đc chạy mà vào thẳng loggingAdvice
     }
 
     @Before("allMethodsPointcut()")// nơi thực hiện thật sự

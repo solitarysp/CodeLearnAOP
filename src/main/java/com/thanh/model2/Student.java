@@ -6,7 +6,11 @@ public class Student {
     private String name;
 
     public String getName() {
-        System.out.println("thưc hiện");
+        System.out.println("thuc hien getname()");
+        return name;
+    }
+    public String getName1() {
+        System.out.println("thuc hien getname1()");
         return name;
     }
 

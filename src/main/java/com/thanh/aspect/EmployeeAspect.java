@@ -8,14 +8,14 @@ import org.aspectj.lang.annotation.Before;
 
 @Aspect
 public class EmployeeAspect {
-    @Before("execution(public String getName())")// gọi trước khi methods có dạng public String getName() đc thực hiện
+    @Before("execution(public String getName1())")// gọi trước khi methods có dạng public String getName() đc thực hiện
     public void getNameAdvice() {
-        System.out.println("Executing Advice on getName()");
+        System.out.println("test Before thuc hient truoc khi vao method");
     }
 
-    @After("execution(public String getName())")//gọi sau
+    @After("execution(public String getName1())")//gọi sau
     public void getAllAdvice() {
-        System.out.println("getName sau khi được gọi");
+        System.out.println("test Before thuc hient sau khi vao method");
     }
 
 }

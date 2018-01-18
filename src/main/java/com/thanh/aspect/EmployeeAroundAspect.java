@@ -13,9 +13,9 @@ public class EmployeeAroundAspect {
     // nếu k gọi proceedingJoinPoint.proceed() thì chỉ có trước và k vào methods và k có sau
     @Around("within(com.thanh.model2.*)")
     public Object employeeAroundAdvice(ProceedingJoinPoint proceedingJoinPoint) throws Throwable {
-        System.out.println("bắt đầu Around");
+        System.out.println("bat dau Around truoc khi vao methods");
         proceedingJoinPoint.proceed(); // nếu k khai báo dòng này, sẽ không chạy vào methos thực hiện, sẽ chạy đến đây và tạm dừng
-        System.out.println("chạy vào methods và kết thúc.");
+        System.out.println(" kết thúc.");
 
         return null;
     }

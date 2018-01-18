@@ -13,8 +13,15 @@ public class EmployeeAfterAspect {
     public void logExceptions(JoinPoint joinPoint) {
         System.out.println("có lỗi gì đó. bug bug bug" + joinPoint.getKind());
     }
-    @AfterReturning(returning = "re",pointcut = "within(com.thanh.model.*)")// lấy tất cả methods trả về String
+
+    @AfterReturning(returning = "re", pointcut = "within(com.thanh.model.*)")// lấy tất cả methods trả về String
     public void getReturningAdvice(String re) {
-        System.out.println("AfterReturning  "+re);
+        System.out.println("method nay co tra ve 1 String :  " + re);
+    }
+
+
+    @AfterReturning(returning = "in", pointcut = "within(com.thanh.model.*)")// lấy tất cả methods trả về int
+    public void getReturningAdviceInt(int in) {
+        System.out.println("method nay co tra ve 1 int :  " + in);
     }
 }

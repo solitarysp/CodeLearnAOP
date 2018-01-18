@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
     <aop:aspectj-autoproxy/>
 
-    <!-- <bean name="employeeAspect" class="com.thanh.aspect.EmployeeAspect"/>-->
+     <bean name="employeeAspect" class="com.thanh.aspect.EmployeeAspect"/>
     <bean name="employeeAnnotationAspect" class="com.thanh.aspect.EmployeeAnnotationAspect"/>
-    <!-- <bean name="employeeAspectPointcut" class="com.thanh.aspect.EmployeeAspectPointcut"/>-->
+     <bean name="employeeAspectPointcut" class="com.thanh.aspect.EmployeeAspectPointcut"/>
     <bean name="aspectJoinPoint" class="com.thanh.aspect.EmployeeAspectJoinPoint"/>
     <bean name="afterAspect" class="com.thanh.aspect.EmployeeAfterAspect"/>
     <bean name="employeeAroundAspect" class="com.thanh.aspect.EmployeeAroundAspect"/>
